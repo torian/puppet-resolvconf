@@ -1,0 +1,14 @@
+###############################################################################
+# << FILE MANAGED BY PUPPET >>
+# Manual changes are likey to be overwritten
+###############################################################################
+
+<% if @domain -%>
+domain <%= @domain %>
+<% end -%>
+<% if  @search != [] %>
+search <% @search.each do |s| -%><%= s %> <% end -%>
+<% end %>
+<% @nameservers.each do |ns| -%>
+nameserver <%= ns %>
+<% end -%>
