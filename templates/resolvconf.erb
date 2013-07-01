@@ -6,7 +6,7 @@
 <% if @domain -%>
 domain <%= @domain %>
 <% end -%>
-<% if  @search != [] %>
+<% if  @search != [] -%>
 search <% @search.each do |s| -%><%= s %> <% end -%>
 <% end %>
 <% @nameservers.each do |ns| -%>
